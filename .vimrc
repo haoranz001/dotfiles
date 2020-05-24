@@ -98,6 +98,7 @@ colorscheme molokai
 
 set showmode
 call pathogen#infect()
+Helptags
 syntax on
 
 map <C-n> :NERDTreeToggle<CR>
