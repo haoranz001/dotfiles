@@ -117,3 +117,5 @@ let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
 hi Visual term=reverse cterm=reverse guibg=Grey
+vnoremap <C-c> "*y 
+" Copy-paste across system
