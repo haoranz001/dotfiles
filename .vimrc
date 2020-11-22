@@ -1,7 +1,5 @@
-" Comments in Vimscript start with a `"`.
-
-" If you open this file in Vim, it'll be syntax highlighted for you.
-
+" this is just a comment
+" If you open this file in Vim, it'll be syntax highlighted for you.  
 " Vim is based on Vi. Setting `nocompatible` switches from the default
 " Vi-compatibility mode and enables useful Vim functionality. This
 " configuration option turns out not to be necessary for the file named
@@ -74,6 +72,7 @@ nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
+nnoremap cx i//<ESC> 
 " ...and in insert mode
 inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
@@ -101,7 +100,7 @@ set showmode
 call pathogen#infect()
 Helptags
 syntax on
-
+" helptags fugitive/doc
 map <C-n> :NERDTreeToggle<CR>
 "autocmd vimenter * NERDTree
 let NERDTreeIgnore = ['\~$', '\.pyc[[file]]', '\.o$']
@@ -119,3 +118,10 @@ let g:lightline = {
 hi Visual term=reverse cterm=reverse guibg=Grey
 vnoremap <C-c> "*y 
 " Copy-paste across system
+" If installed using Homebrew
+set rtp+=/usr/local/opt/fzf
+" Automatically closing braces
+inoremap {<CR> {<CR>}<Esc>ko<tab>
+inoremap [<CR> [<CR>]<Esc>ko<tab>
+inoremap (<CR> (<CR>)<Esc>ko<tab>
+
